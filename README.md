@@ -21,5 +21,5 @@
 
 **Nuceli segmentation**:
 
-- **MonuSeg** (Binary):
-+ **PanNuke** (Multiclass):
+- **MonuSeg** (Binary): https://monuseg.grand-challenge.org/Data/
++ **PanNuke** (Multiclass): https://warwick.ac.uk/fac/cross_fac/tia/data/pannuke
