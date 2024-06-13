@@ -27,6 +27,7 @@
 ## **Input Data Structure**:
 - Follow https://github.com/jeya-maria-jose/UNeXt-pytorch to structure the input data folder for the datasets (ISIC2017, ISIC2018, HAM10000, BUSI, UDIAT)
 
-- change the -arch arguement to desired model archietcture in train_ISIC_BUSI.py file (
+- change the -arch arguement to desired model archietcture in train_ISIC_BUSI.py file (UNet, UNext, Morph_UNet_MSMCM/MSMGM/MSMOM, Morpho_UNet_efficientnetb4_MSMCM/MSMGM/MSMOM, Morpho_UNet_ResNet34_MSMCM/MSMGM/MSMOM, fatnet, MALUNet, transfuse etc)
 - run train_ISIC_BUSI.py to train the model
+  
 
