@@ -31,3 +31,4 @@
 - run train_ISIC_BUSI.py to train the model
   
 
+## Thanks to https://github.com/jeya-maria-jose/UNeXt-pytorch for the framework which we have used to compare among different methods
