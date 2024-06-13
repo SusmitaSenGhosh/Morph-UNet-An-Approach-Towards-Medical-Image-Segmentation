@@ -21,12 +21,12 @@ import losses
 
 from metrics import iou_score
 from utils import AverageMeter, str2bool
-from archs import UNext  # uncomment this for UNext
+#from archs import UNext  # uncomment this for UNext
 #from models import * # uncomment this for Morph-UNet
-from fatnet import * # uncomment this for FATNet
+#from fatnet import * # uncomment this for FATNet
 #from MALUNet import * # uncomment this for MALUNet
-#from TransFuse import TransFuse_S, TransFuse_L, TransFuse_L_384
-
+#from TransFuse import TransFuse_S, TransFuse_L, TransFuse_L_384 # uncomment this for transfuse
+import models_APFormer # uncomment this for APFormer
 import segmentation_models_pytorch as smp
 from torchsummary import summary
 ARCH_NAMES = archs.__all__
@@ -46,7 +46,7 @@ def parse_args():
                         metavar='N', help='mini-batch size (default: 16)')
     
     # model
-    parser.add_argument('--arch', '-a', metavar='ARCH', default='fatnet')
+    parser.add_argument('--arch', '-a', metavar='ARCH', default='APFormer')
     parser.add_argument('--deep_supervision', default=False, type=str2bool)
     parser.add_argument('--input_channels', default=3, type=int,
                         help='input channels')
@@ -260,7 +260,8 @@ def main():
                         bridge=True)
     elif config['arch'] == "transfuse":
             model = TransFuse_S(pretrained=True)
-
+    elif config['arch'] == "APFormer":
+        model = models_APFormer.P2UtransR.APFormer_Model(n_channels=3, n_classes=1, imgsize=256)
 
     model = model.cuda()
     #summary(model, (3,256,256))
