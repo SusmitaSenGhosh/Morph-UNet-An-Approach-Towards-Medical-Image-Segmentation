@@ -19,4 +19,7 @@
 
 - **GlaS**: https://academictorrents.com/details/208814dd113c2b0a242e74e832ccac28fcff74e5
 
-**MonuSeg**:
+**Nuceli segmentation**:
+
+- **MonuSeg** (Binary):
++ **PanNuke** (Multiclass):
