@@ -1,5 +1,5 @@
 # Morph-UNet: An Approach Towards Medical Image Segmentation using Novel Multiscale Trainable  Morphological Modules
-**Dataset**:
+## **Dataset**:
 
 **Skin lesion segmentation**:
 
@@ -24,5 +24,9 @@
 - **MonuSeg** (Binary): https://monuseg.grand-challenge.org/Data/
 + **PanNuke** (Multiclass): https://warwick.ac.uk/fac/cross_fac/tia/data/pannuke
 
+## **Input Data Structure**:
+- Follow https://github.com/jeya-maria-jose/UNeXt-pytorch to structure the input data folder for the datasets (ISIC2017, ISIC2018, HAM10000, BUSI, UDIAT)
 
-**Steps**:
+- change the -arch arguement to desired model archietcture in train_ISIC_BUSI.py file (
+- run train_ISIC_BUSI.py to train the model
+
