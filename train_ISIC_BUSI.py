@@ -21,11 +21,11 @@ import losses
 
 from metrics import iou_score
 from utils import AverageMeter, str2bool
-from archs import UNext
-from models import *
-# from fatnet import *
-from MALUNet import *
-from TransFuse import TransFuse_S, TransFuse_L, TransFuse_L_384
+from archs import UNext  # uncomment this for UNext
+#from models import * # uncomment this for Morph-UNet
+from fatnet import * # uncomment this for FATNet
+#from MALUNet import * # uncomment this for MALUNet
+#from TransFuse import TransFuse_S, TransFuse_L, TransFuse_L_384
 
 import segmentation_models_pytorch as smp
 from torchsummary import summary
@@ -46,7 +46,7 @@ def parse_args():
                         metavar='N', help='mini-batch size (default: 16)')
     
     # model
-    parser.add_argument('--arch', '-a', metavar='ARCH', default='UNext')
+    parser.add_argument('--arch', '-a', metavar='ARCH', default='fatnet')
     parser.add_argument('--deep_supervision', default=False, type=str2bool)
     parser.add_argument('--input_channels', default=3, type=int,
                         help='input channels')
@@ -65,7 +65,7 @@ def parse_args():
                         ' (default: BCEDiceLoss)')
     
     # dataset
-    parser.add_argument('--dataset', default='isic',
+    parser.add_argument('--dataset', default='BUSI',
                         help='dataset name')
     parser.add_argument('--img_ext', default='.png',
                         help='image file extension')
