@@ -28,7 +28,7 @@
 ## **Inputs data structure**:
    - The inputs data for ISIC2017, BUSI, ISIC2018, UDIAT, HAM10000, GlaS dataset must be structred in folders as instructed by https://github.com/jeya-maria-jose/UNeXt-pytorch
 
-## run train_ISIC_BUSI.py and change the 
+- run train_ISIC_BUSI.py and change the 
 
 
 
